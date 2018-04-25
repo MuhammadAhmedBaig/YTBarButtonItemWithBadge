@@ -37,7 +37,7 @@ public class YTBarButtonItemWithBadge {
         
     }
     
-    public  init(badgeVerticalPosition: Int?=0) {
+    public  init(badgeVerticalPosition: CFLoat?=0) {
         
         badgeLabel.font = UIFont.systemFont(ofSize: 10);
         badgeLabel.textAlignment = .center;
