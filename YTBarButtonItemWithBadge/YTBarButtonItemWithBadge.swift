@@ -91,5 +91,9 @@ public class YTBarButtonItemWithBadge {
         }
         self.callback = callback;
     }
+    
+    public func setBackgroundColorOfLabel(color: UIColor) {
+        self.badgeLabel.backgroundColor = color;
+    }
 }
 
