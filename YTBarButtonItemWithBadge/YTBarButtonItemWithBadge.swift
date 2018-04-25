@@ -37,6 +37,25 @@ public class YTBarButtonItemWithBadge {
         
     }
     
+    public  init(badgeVerticalPosition: Int?=0) {
+        
+        badgeLabel.font = UIFont.systemFont(ofSize: 10);
+        badgeLabel.textAlignment = .center;
+        badgeLabel.layer.masksToBounds = true;
+        badgeLabel.layer.cornerRadius = badgeLabel.frame.width / 2;
+        badgeLabel.backgroundColor = UIColor.red;
+        badgeLabel.textColor = UIColor.white;
+        badgeLabel.frame.origin.y = badgeVerticalPosition!;
+        
+        button.addSubview(badgeLabel);
+        barButtonItem = UIBarButtonItem(customView: button);
+        
+        self.setBadge(value: nil);
+        self.setTitle(value: nil);
+        self.setImage(image: nil);
+        
+    }
+    
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
